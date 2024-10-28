@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>備蓄登録フォーム</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>備蓄登録フォーム</h1>
+        <button id="scan-button">バーコードで商品名を読み取る</button>
+        <form action="#" method="post" id="storage-form">
+            <div class="form-group">
+                <label for="category">カテゴリー <span class="required">*</span>:</label>
+                <select id="category" name="category" required>
+                    <option value="">選択してください</option>
+                    <option value="食品">食品</option>
+                    <option value="飲料">飲料</option>
+                    <option value="日用品">日用品</option>
+                    <option value="その他">その他</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="product">備蓄品名 <span class="required">*</span>:</label>
+                <input type="text" id="product" name="product" required placeholder="例：長粒米">
+            </div>
+            <div class="form-group">
+                <label for="quantity">数量 <span class="required">*</span>:</label>
+                <input type="number" id="quantity" name="quantity" min="1" required placeholder="例：10">
+            </div>
+            <div class="form-group">
+                <label for="expiry">賞味期限 <span class="required">*</span>:</label>
+                <input type="date" id="expiry" name="expiry" required>
+            </div>
+            <button type="submit">登録する</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
